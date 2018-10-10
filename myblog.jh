@@ -1,3 +1,26 @@
+// https://www.jhipster.tech/jdl/
+
+application {
+  config {
+    applicationType monolith,
+    baseName myblog
+    packageName acs.myblog,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    devDatabaseType h2Disk,
+    buildTool maven,
+    searchEngine elasticsearch,
+    testFrameworks [protractor, cucumber, gatling],
+    clientFramework angularX,
+    useSass true,
+    enableTranslation true,
+    nativeLanguage en,
+    languages [fr, en, es]
+  }
+  entities Blog, Entry, Comment // Rate
+}
+
+
 NAME_LENGTH = 3
 TEXT_MAX_LENGTH = 50000
 COMMENT_MAX_LENGTH = 2000

@@ -50,6 +50,7 @@ jhipster
 ### Generate the entities of myblog
 https://www.jhipster.tech/creating-an-entity/
 
+The reference page for JDL is https://www.jhipster.tech/jdl/
 Term 1
 ```shell
 jhipster import-jdl ../acs/myblog.jdl --force
