@@ -2,7 +2,11 @@
 
 
 @ Home : JHipster installation https://www.jhipster.tech
+
+@ Home : Docker CE installation https://docs.docker.com/install/
+
 @ Home : Create a heroku free account https://www.heroku.com/
+
 @ Home : Install cloc https://github.com/AlDanial/cloc
 
 ## Generation of blank "monolothic" application (Angular frontend)
@@ -34,7 +38,7 @@
 ## Help
 
 ### Installation
-JavaSE 8, node, npm, yo, yarn
+JavaSE 8, node, npm, yo, yarn, Docker CE
 https://www.jhipster.tech/installation/
 
 
@@ -46,6 +50,21 @@ cd myblog
 jhipster
 ./mvn
 ```
+
+### Analyze the generated code
+
+```shell
+cloc src/ webpack/ package.json angular.json tslint.json pom.xml 
+```
+
+```shell
+docker-compose -f src/main/docker/sonar.yml up 
+```
+
+```shell
+./mvnw sonar:sonar
+```
+open http://localhost:9000
 
 ### Generate the entities of myblog
 https://www.jhipster.tech/creating-an-entity/
