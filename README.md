@@ -108,3 +108,4 @@ java -jar target/myblog
 * Microservices: Building Scalable Software, https://www.packtpub.com/mapt/book/application_development/9781787285835
 * Building Microservices, Designing Fine-Grained Systems, http://shop.oreilly.com/product/0636920033158.do
 * Full Stack Development with JHipster, https://www.packtpub.com/application-development/full-stack-development-jhipster
+*  The JHipster Mini-Book (free), http://www.jhipster-book.com
