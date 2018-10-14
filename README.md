@@ -38,8 +38,8 @@
 ## Help
 
 ### Installation
-JavaSE 8, node, npm, yo, yarn, Docker CE
-https://www.jhipster.tech/installation/
+* JavaSE 8, node, npm, yo, yarn, Docker CE
+* Follow https://www.jhipster.tech/installation/
 
 
 ### Generate the blank application
@@ -54,11 +54,12 @@ jhipster
 ### Analyze the generated code
 
 ```shell
-cloc src/ webpack/ package.json angular.json tslint.json pom.xml 
+# install cloc https://github.com/AlDanial/cloc
+cloc src/ webpack/ package.json angular.json tslint.json pom.xml
 ```
 
 ```shell
-docker-compose -f src/main/docker/sonar.yml up 
+docker-compose -f src/main/docker/sonar.yml up
 ```
 
 ```shell
@@ -96,4 +97,6 @@ java -jar target/myblog
 ```
 
 ### Deploy on Heroku
-https://www.jhipster.tech/heroku/
+* https://www.jhipster.tech/heroku/
+* https://www.youtube.com/watch?v=ZE57horCI0Y
+* https://fr.slideshare.net/jkutner/why-heroku-loves-jhipster

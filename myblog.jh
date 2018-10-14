@@ -3,7 +3,7 @@
 application {
   config {
     applicationType monolith,
-    baseName myblog
+    baseName myblog,
     packageName acs.myblog,
     authenticationType jwt,
     prodDatabaseType mysql,
@@ -17,7 +17,7 @@ application {
     nativeLanguage en,
     languages [fr, en, es]
   }
-  entities Blog, Entry, Comment // Rate
+  entities Blog, BEntry, BComment // Rate
 }
 
 
@@ -37,30 +37,30 @@ entity Blog {
 paginate Blog with pagination
 
 /** The blog entry */
-entity Entry {
+entity BEntry {
     title String required,
     content TextBlob required maxbytes(TEXT_MAX_LENGTH),
     photo ImageBlob maxbytes(IMAGE_MAX_LENGTH),
     createdAt ZonedDateTime required,
     updatedAt ZonedDateTime
 }
+paginate BEntry with infinite-scroll
 
 /** The user comment */
-entity Comment {
+entity BComment {
     comment TextBlob required maxbytes(COMMENT_MAX_LENGTH),
     photo ImageBlob maxbytes(IMAGE_MAX_LENGTH),
     createdAt ZonedDateTime required,
     updatedAt ZonedDateTime
 }
-paginate Comment with infinite-scroll
+paginate BComment with infinite-scroll
 
 relationship ManyToOne {
     Blog{user(login)} to User,
-    Entry{blog(name)} to Blog,
-    Comment{entry(title)} to Entry,
-    Comment{commenter(login)} to User
+    BEntry{blog(name)} to Blog,
+    BComment{entry(title)} to BEntry,
+    BComment{commenter(login)} to User
 }
-paginate Entry with infinite-scroll
 
 ///** The rate */
 //entity Rate {
