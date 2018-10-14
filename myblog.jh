@@ -74,4 +74,4 @@ service all with serviceImpl
 //angularSuffix * with acs
 //microservice * with acs
 //search * with elasticsearch
-// TODO Exercice : add entity Comment
+// TODO Exercice : add entity Comment and Rate
